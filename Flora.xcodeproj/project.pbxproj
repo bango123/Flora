@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17BFFD721EC8E17B00379480 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFFD711EC8E17B00379480 /* AppDelegate.swift */; };
+		17BFFD741EC8E17B00379480 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFFD731EC8E17B00379480 /* ViewController.swift */; };
+		17BFFD771EC8E17B00379480 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17BFFD751EC8E17B00379480 /* Main.storyboard */; };
+		17BFFD791EC8E17B00379480 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17BFFD781EC8E17B00379480 /* Assets.xcassets */; };
+		17BFFD7C1EC8E17B00379480 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17BFFD7A1EC8E17B00379480 /* LaunchScreen.storyboard */; };
+		17BFFD871EC8E17B00379480 /* FloraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFFD861EC8E17B00379480 /* FloraTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17BFFD831EC8E17B00379480 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17BFFD661EC8E17B00379480 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17BFFD6D1EC8E17B00379480;
+			remoteInfo = Flora;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		17BFFD6E1EC8E17B00379480 /* Flora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flora.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17BFFD711EC8E17B00379480 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		17BFFD731EC8E17B00379480 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		17BFFD761EC8E17B00379480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		17BFFD781EC8E17B00379480 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17BFFD7B1EC8E17B00379480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		17BFFD7D1EC8E17B00379480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17BFFD821EC8E17B00379480 /* FloraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FloraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17BFFD861EC8E17B00379480 /* FloraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloraTests.swift; sourceTree = "<group>"; };
+		17BFFD881EC8E17B00379480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17BFFD6B1EC8E17B00379480 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17BFFD7F1EC8E17B00379480 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17BFFD651EC8E17B00379480 = {
+			isa = PBXGroup;
+			children = (
+				17BFFD701EC8E17B00379480 /* Flora */,
+				17BFFD851EC8E17B00379480 /* FloraTests */,
+				17BFFD6F1EC8E17B00379480 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		17BFFD6F1EC8E17B00379480 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17BFFD6E1EC8E17B00379480 /* Flora.app */,
+				17BFFD821EC8E17B00379480 /* FloraTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17BFFD701EC8E17B00379480 /* Flora */ = {
+			isa = PBXGroup;
+			children = (
+				17BFFD711EC8E17B00379480 /* AppDelegate.swift */,
+				17BFFD731EC8E17B00379480 /* ViewController.swift */,
+				17BFFD751EC8E17B00379480 /* Main.storyboard */,
+				17BFFD781EC8E17B00379480 /* Assets.xcassets */,
+				17BFFD7A1EC8E17B00379480 /* LaunchScreen.storyboard */,
+				17BFFD7D1EC8E17B00379480 /* Info.plist */,
+			);
+			path = Flora;
+			sourceTree = "<group>";
+		};
+		17BFFD851EC8E17B00379480 /* FloraTests */ = {
+			isa = PBXGroup;
+			children = (
+				17BFFD861EC8E17B00379480 /* FloraTests.swift */,
+				17BFFD881EC8E17B00379480 /* Info.plist */,
+			);
+			path = FloraTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17BFFD6D1EC8E17B00379480 /* Flora */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17BFFD8B1EC8E17C00379480 /* Build configuration list for PBXNativeTarget "Flora" */;
+			buildPhases = (
+				17BFFD6A1EC8E17B00379480 /* Sources */,
+				17BFFD6B1EC8E17B00379480 /* Frameworks */,
+				17BFFD6C1EC8E17B00379480 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Flora;
+			productName = Flora;
+			productReference = 17BFFD6E1EC8E17B00379480 /* Flora.app */;
+			productType = "com.apple.product-type.application";
+		};
+		17BFFD811EC8E17B00379480 /* FloraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17BFFD8E1EC8E17C00379480 /* Build configuration list for PBXNativeTarget "FloraTests" */;
+			buildPhases = (
+				17BFFD7E1EC8E17B00379480 /* Sources */,
+				17BFFD7F1EC8E17B00379480 /* Frameworks */,
+				17BFFD801EC8E17B00379480 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17BFFD841EC8E17B00379480 /* PBXTargetDependency */,
+			);
+			name = FloraTests;
+			productName = FloraTests;
+			productReference = 17BFFD821EC8E17B00379480 /* FloraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17BFFD661EC8E17B00379480 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Florian Richter";
+				TargetAttributes = {
+					17BFFD6D1EC8E17B00379480 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = PA7L6M29BC;
+						ProvisioningStyle = Automatic;
+					};
+					17BFFD811EC8E17B00379480 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = PA7L6M29BC;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 17BFFD6D1EC8E17B00379480;
+					};
+				};
+			};
+			buildConfigurationList = 17BFFD691EC8E17B00379480 /* Build configuration list for PBXProject "Flora" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 17BFFD651EC8E17B00379480;
+			productRefGroup = 17BFFD6F1EC8E17B00379480 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17BFFD6D1EC8E17B00379480 /* Flora */,
+				17BFFD811EC8E17B00379480 /* FloraTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17BFFD6C1EC8E17B00379480 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17BFFD7C1EC8E17B00379480 /* LaunchScreen.storyboard in Resources */,
+				17BFFD791EC8E17B00379480 /* Assets.xcassets in Resources */,
+				17BFFD771EC8E17B00379480 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17BFFD801EC8E17B00379480 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17BFFD6A1EC8E17B00379480 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17BFFD741EC8E17B00379480 /* ViewController.swift in Sources */,
+				17BFFD721EC8E17B00379480 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17BFFD7E1EC8E17B00379480 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17BFFD871EC8E17B00379480 /* FloraTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17BFFD841EC8E17B00379480 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17BFFD6D1EC8E17B00379480 /* Flora */;
+			targetProxy = 17BFFD831EC8E17B00379480 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		17BFFD751EC8E17B00379480 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17BFFD761EC8E17B00379480 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		17BFFD7A1EC8E17B00379480 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17BFFD7B1EC8E17B00379480 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		17BFFD891EC8E17C00379480 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		17BFFD8A1EC8E17C00379480 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17BFFD8C1EC8E17C00379480 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PA7L6M29BC;
+				INFOPLIST_FILE = Flora/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = frichter.Flora;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		17BFFD8D1EC8E17C00379480 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PA7L6M29BC;
+				INFOPLIST_FILE = Flora/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = frichter.Flora;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		17BFFD8F1EC8E17C00379480 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = PA7L6M29BC;
+				INFOPLIST_FILE = FloraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = frichter.FloraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flora.app/Flora";
+			};
+			name = Debug;
+		};
+		17BFFD901EC8E17C00379480 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = PA7L6M29BC;
+				INFOPLIST_FILE = FloraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = frichter.FloraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flora.app/Flora";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17BFFD691EC8E17B00379480 /* Build configuration list for PBXProject "Flora" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17BFFD891EC8E17C00379480 /* Debug */,
+				17BFFD8A1EC8E17C00379480 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17BFFD8B1EC8E17C00379480 /* Build configuration list for PBXNativeTarget "Flora" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17BFFD8C1EC8E17C00379480 /* Debug */,
+				17BFFD8D1EC8E17C00379480 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		17BFFD8E1EC8E17C00379480 /* Build configuration list for PBXNativeTarget "FloraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17BFFD8F1EC8E17C00379480 /* Debug */,
+				17BFFD901EC8E17C00379480 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17BFFD661EC8E17B00379480 /* Project object */;
+}
