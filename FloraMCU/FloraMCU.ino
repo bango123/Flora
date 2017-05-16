@@ -47,6 +47,12 @@ void setup() {
  /* Disable command echo from Bluefruit */
   ble.echo(false);
 
+  /* Set the name */
+   ble.println("AT+GAPDEVNAME=Flora <3");
+   ble.waitForOK();
+
+   ble.println("ATZ");
+
   Serial.println("Requesting Bluefruit info:");
   /* Print Bluefruit information */
   ble.info();
