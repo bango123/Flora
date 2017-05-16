@@ -17,11 +17,15 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     
     var manager: CBCentralManager!
     var connectedPeripheral: CBPeripheral!
+    var connectingToPeripheral = false
+    var connectedToPeripheral = false
     
     fileprivate let UartServiceUUID = "6e400001-b5a3-f393-e0a9-e50e24dcca9e"       // UART service UUID
     fileprivate let TxCharacteristicUUID = "6e400002-b5a3-f393-e0a9-e50e24dcca9e"
     fileprivate var txCharacteristic: CBCharacteristic?
     fileprivate var txWriteType = CBCharacteristicWriteType.withResponse
+    
+    var alertController: UIAlertController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,17 +38,48 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
 
         if let name = peripheral.name{
             DLog("did discover " + name)
+            
+            //Found Flora and begings the connection!!
             if name == "Flora <3"{
+                self.connectingToPeripheral = true
+                
+                //Starts the connection
                 self.connectedPeripheral = peripheral
                 peripheral.delegate = self;
                 manager.connect(peripheral, options: nil);
                 manager.stopScan();
                 
+                DLog("Begin connecting to Flora")
+                self.alertController.message = "Connecting to Flora"
+                self.alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_) -> Void in
+                    self.manager.cancelPeripheralConnection(self.connectedPeripheral)
+                    self.connectedPeripheral = nil
+                }))
+                
+                //keeps repeating till both the peripheral and the bluetooth manager say they are connected
+               Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.waitTillManagerConnected),userInfo: nil, repeats: connectingToPeripheral)
             }
         }
     }
     
-    
+    func waitTillManagerConnected(){
+        if !self.connectedToPeripheral && self.connectingToPeripheral{
+            DLog("Connecting to Flora")
+            var managerConnected = false;
+            for peripheral in manager.retrieveConnectedPeripherals(withServices: [CBUUID(string: UartServiceUUID)]){
+                if peripheral.name! == "Flora <3"{
+                    managerConnected = true;
+                }
+            }
+            if connectedPeripheral.state == .connected && managerConnected{
+                self.connectingToPeripheral = false
+                self.connectedToPeripheral = true
+                self.alertController.message = "Discovering Services"
+                DLog("Connected to Flora")
+                connectedPeripheral.discoverServices([CBUUID(string: UartServiceUUID)])
+            }
+        }
+    }
     
     private func centralManager(central: CBCentralManager, didConnectPeripheral peripheral: CBPeripheral) {
         DLog("connected!")
@@ -78,6 +113,10 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
             DLog("BLE service is powered on")
             DLog("Start Scanning")
             manager.scanForPeripherals(withServices: nil, options: nil)
+            DispatchQueue.main.async(execute: {[unowned self] in
+                self.alertController = UIAlertController(title: nil, message: "Finding Flora", preferredStyle: .alert)
+                self.present(self.alertController, animated: true, completion:nil)
+            })
         }
     }
     
@@ -98,11 +137,25 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
                 txCharacteristic = characteristic
                 txWriteType = characteristic.properties.contains(.writeWithoutResponse) ? .withoutResponse:.withResponse
                 DLog("Uart: detected TX with txWriteType: \(txWriteType.rawValue)")
+                self.alertController.dismiss(animated: true, completion: nil)
                 
-                let command = "-255, 0, 0, 0"
+                let command = "-0, 255, 0, 0"
                 connectedPeripheral.writeValue(command.data(using: .utf8)!, for: txCharacteristic!, type: txWriteType)
             }
         }
+    }
+    
+    func stillConnectedToPeripheral() -> Bool{
+        var managerConnected = false;
+        for peripheral in manager.retrieveConnectedPeripherals(withServices: [CBUUID(string: UartServiceUUID)]){
+            if peripheral.name! == "Flora <3"{
+                managerConnected = true;
+            }
+        }
+        if connectedPeripheral.state == .connected && managerConnected{
+            return true
+        }
+        return false
     }
     
 
@@ -111,25 +164,21 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         // Dispose of any resources that can be recreated.
     }
     @IBAction func onSend(_ sender: Any) {
-        if(connectedPeripheral != nil){
-            switch connectedPeripheral.state
-            {
-            case .connecting:
-                DLog("peripheral thinks it is connecting")
-            case .connected:
-                DLog("peripheral thinks it is connected")
-                connectedPeripheral.discoverServices([CBUUID(string: UartServiceUUID)])
-            case .disconnected:
-                DLog("peripheral thinks it is disconnected")
-            case .disconnecting:
-                DLog("peripheral thinks it is disconencting")
-            }
-            for peripheral in manager.retrieveConnectedPeripherals(withServices: [CBUUID(string: UartServiceUUID)]){
-                DLog("Manager is connected to " + peripheral.name!)
-            }
+        sendMessageToPeripheral(msg: "-255,0,100,0")
+    }
+    
+
+    
+    func sendMessageToPeripheral(msg: String){
+        guard stillConnectedToPeripheral() else {
+            self.connectedToPeripheral = false
+            manager.scanForPeripherals(withServices: nil, options: nil)
+            DispatchQueue.main.async(execute: {[unowned self] in
+                self.alertController = UIAlertController(title: nil, message: "Finding Flora", preferredStyle: .alert)
+                self.present(self.alertController, animated: true, completion:nil)
+            })
+            return
         }
-        else{
-            DLog("No peripheral was ever attempted to connect with")
-        }
+        connectedPeripheral.writeValue(msg.data(using: .utf8)!, for: txCharacteristic!, type: txWriteType)
     }
 }
