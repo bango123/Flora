@@ -48,10 +48,11 @@ void setup() {
   ble.echo(false);
 
   /* Set the name */
-   ble.println("AT+GAPDEVNAME=Flora <3");
-   ble.waitForOK();
-
-   ble.println("ATZ");
+//   ble.println("AT+GAPDEVNAME=Flora <3");
+//   ble.waitForOK();
+//
+//   ble.println("ATZ");
+//Commented out since the name does not need to be changed on every turn on. Also it causes a disconnect.
 
   Serial.println("Requesting Bluefruit info:");
   /* Print Bluefruit information */

@@ -14,6 +14,7 @@
 		17BFFD7C1EC8E17B00379480 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17BFFD7A1EC8E17B00379480 /* LaunchScreen.storyboard */; };
 		17BFFD871EC8E17B00379480 /* FloraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFFD861EC8E17B00379480 /* FloraTests.swift */; };
 		17BFFD921EC9151F00379480 /* LogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFFD911EC9151F00379480 /* LogHelper.swift */; };
+		17BFFD941ECD661900379480 /* FloraBLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFFD931ECD661900379480 /* FloraBLEManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		17BFFD861EC8E17B00379480 /* FloraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloraTests.swift; sourceTree = "<group>"; };
 		17BFFD881EC8E17B00379480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17BFFD911EC9151F00379480 /* LogHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogHelper.swift; sourceTree = "<group>"; };
+		17BFFD931ECD661900379480 /* FloraBLEManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloraBLEManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		17BFFD701EC8E17B00379480 /* Flora */ = {
 			isa = PBXGroup;
 			children = (
+				17BFFD931ECD661900379480 /* FloraBLEManager.swift */,
 				17BFFD711EC8E17B00379480 /* AppDelegate.swift */,
 				17BFFD731EC8E17B00379480 /* ViewController.swift */,
 				17BFFD911EC9151F00379480 /* LogHelper.swift */,
@@ -206,6 +209,7 @@
 			files = (
 				17BFFD741EC8E17B00379480 /* ViewController.swift in Sources */,
 				17BFFD921EC9151F00379480 /* LogHelper.swift in Sources */,
+				17BFFD941ECD661900379480 /* FloraBLEManager.swift in Sources */,
 				17BFFD721EC8E17B00379480 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +422,7 @@
 				17BFFD8D1EC8E17C00379480 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		17BFFD8E1EC8E17C00379480 /* Build configuration list for PBXNativeTarget "FloraTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +431,7 @@
 				17BFFD901EC8E17C00379480 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
