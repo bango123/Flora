@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		172A6EC71ED20A82002B5263 /* LEDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172A6EC61ED20A82002B5263 /* LEDViewController.swift */; };
+		172A6EC91ED20B47002B5263 /* FloraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172A6EC81ED20B47002B5263 /* FloraViewController.swift */; };
+		1755B1E21ED338D900D95BC0 /* LEDScarf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1755B1E11ED338D900D95BC0 /* LEDScarf.swift */; };
 		17BFFD721EC8E17B00379480 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFFD711EC8E17B00379480 /* AppDelegate.swift */; };
-		17BFFD741EC8E17B00379480 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFFD731EC8E17B00379480 /* ViewController.swift */; };
+		17BFFD741EC8E17B00379480 /* ScarfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFFD731EC8E17B00379480 /* ScarfViewController.swift */; };
 		17BFFD771EC8E17B00379480 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17BFFD751EC8E17B00379480 /* Main.storyboard */; };
 		17BFFD791EC8E17B00379480 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17BFFD781EC8E17B00379480 /* Assets.xcassets */; };
 		17BFFD7C1EC8E17B00379480 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17BFFD7A1EC8E17B00379480 /* LaunchScreen.storyboard */; };
@@ -28,9 +31,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		172A6EC61ED20A82002B5263 /* LEDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LEDViewController.swift; sourceTree = "<group>"; };
+		172A6EC81ED20B47002B5263 /* FloraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloraViewController.swift; sourceTree = "<group>"; };
+		1755B1E11ED338D900D95BC0 /* LEDScarf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LEDScarf.swift; sourceTree = "<group>"; };
 		17BFFD6E1EC8E17B00379480 /* Flora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17BFFD711EC8E17B00379480 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		17BFFD731EC8E17B00379480 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		17BFFD731EC8E17B00379480 /* ScarfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScarfViewController.swift; sourceTree = "<group>"; };
 		17BFFD761EC8E17B00379480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		17BFFD781EC8E17B00379480 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17BFFD7B1EC8E17B00379480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,6 +66,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		172A6ECA1ED20B50002B5263 /* ViewControlelrs */ = {
+			isa = PBXGroup;
+			children = (
+				17BFFD731EC8E17B00379480 /* ScarfViewController.swift */,
+				172A6EC61ED20A82002B5263 /* LEDViewController.swift */,
+				172A6EC81ED20B47002B5263 /* FloraViewController.swift */,
+			);
+			name = ViewControlelrs;
+			sourceTree = "<group>";
+		};
+		172A6ECB1ED20C36002B5263 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1755B1E11ED338D900D95BC0 /* LEDScarf.swift */,
+				17BFFD911EC9151F00379480 /* LogHelper.swift */,
+				17BFFD931ECD661900379480 /* FloraBLEManager.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		17BFFD651EC8E17B00379480 = {
 			isa = PBXGroup;
 			children = (
@@ -81,10 +107,9 @@
 		17BFFD701EC8E17B00379480 /* Flora */ = {
 			isa = PBXGroup;
 			children = (
-				17BFFD931ECD661900379480 /* FloraBLEManager.swift */,
+				172A6ECA1ED20B50002B5263 /* ViewControlelrs */,
+				172A6ECB1ED20C36002B5263 /* Utils */,
 				17BFFD711EC8E17B00379480 /* AppDelegate.swift */,
-				17BFFD731EC8E17B00379480 /* ViewController.swift */,
-				17BFFD911EC9151F00379480 /* LogHelper.swift */,
 				17BFFD751EC8E17B00379480 /* Main.storyboard */,
 				17BFFD781EC8E17B00379480 /* Assets.xcassets */,
 				17BFFD7A1EC8E17B00379480 /* LaunchScreen.storyboard */,
@@ -207,8 +232,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17BFFD741EC8E17B00379480 /* ViewController.swift in Sources */,
+				172A6EC71ED20A82002B5263 /* LEDViewController.swift in Sources */,
+				1755B1E21ED338D900D95BC0 /* LEDScarf.swift in Sources */,
+				17BFFD741EC8E17B00379480 /* ScarfViewController.swift in Sources */,
 				17BFFD921EC9151F00379480 /* LogHelper.swift in Sources */,
+				172A6EC91ED20B47002B5263 /* FloraViewController.swift in Sources */,
 				17BFFD941ECD661900379480 /* FloraBLEManager.swift in Sources */,
 				17BFFD721EC8E17B00379480 /* AppDelegate.swift in Sources */,
 			);

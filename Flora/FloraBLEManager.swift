@@ -19,6 +19,9 @@ class FloraBLEManager : NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
     var connectedToPeripheral = false
     var discoveredServices = false
     
+    var sendingMessage = false
+    var nextCommand: String?
+    
     fileprivate let UartServiceUUID = "6e400001-b5a3-f393-e0a9-e50e24dcca9e"       // UART service UUID
     fileprivate let TxCharacteristicUUID = "6e400002-b5a3-f393-e0a9-e50e24dcca9e"
     fileprivate var txCharacteristic: CBCharacteristic?
@@ -80,7 +83,7 @@ class FloraBLEManager : NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
                 DLog("Begin connecting to Flora")
                 
                 //Waits here till both the peripheral and the bluetooth manager say they are connected
-                Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(FloraBLEManager.waitTillManagerConnected),userInfo: nil, repeats: connectingToPeripheral)
+                Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(FloraBLEManager.waitTillManagerConnected),userInfo: nil, repeats: connectedToPeripheral)
             }
         }
     }
@@ -135,19 +138,51 @@ class FloraBLEManager : NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
                 
                 NotificationCenter.default.post(name: Notification.Name(rawValue: "connectedToFlora"), object: nil)
                 
-                let command = "-0, 255, 0, 0"
-                connectedPeripheral.writeValue(command.data(using: .utf8)!, for: txCharacteristic!, type: txWriteType)
+                //let command = "-0, 255, 0, 0"
+                //connectedPeripheral.writeValue(command.data(using: .utf8)!, for: txCharacteristic!, type: txWriteType)
             }
         }
     }
+    
     
     func sendMessageToPeripheral(msg: String){
         guard amIConnectedToPeripheral() else {
             self.connectedToPeripheral = false
             self.discoveredServices = false
-            manager.scanForPeripherals(withServices: nil, options: nil)
+            startScan()
             return
         }
-        connectedPeripheral.writeValue(msg.data(using: .utf8)!, for: txCharacteristic!, type: txWriteType)
+        
+        //This makes sure that the newest command is sent after the one currently being sent is done being sent
+        if(!sendingMessage){
+            sendingMessage = true
+            connectedPeripheral.writeValue(msg.data(using: .utf8)!, for: txCharacteristic!, type: txWriteType)
+            
+            let when = DispatchTime.now() + 0.05
+            
+            //This will run after our previous message has been sent!
+            DispatchQueue.main.asyncAfter(deadline: when) {
+                self.sendingMessage = false
+                if let command = self.nextCommand{
+                    self.nextCommand = nil
+                    self.sendMessageToPeripheral(msg: command)
+                }
+            }
+        }
+            
+        else{
+            nextCommand = msg
+        }
+    }
+    
+    func sendLEDCommand(LED: Int, rgb: [Int]){
+        let red = rgb[0]
+        let green = rgb[1]
+        let blue = rgb[2]
+        
+        let message = "-\(red),\(green),\(blue),\(LED)"
+        
+        //DLog(message)
+        sendMessageToPeripheral(msg: message)
     }
 }

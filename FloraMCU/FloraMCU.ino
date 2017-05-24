@@ -73,6 +73,10 @@ void setup() {
 
 void loop(void)
 {
+  if( !ble.isConnected()){
+    delay(500);
+  }
+  
   // Check for incoming characters from Bluefruit
   ble.println("AT+BLEUARTRX");
   ble.readline();
@@ -100,30 +104,38 @@ void loop(void)
     //Parse the input encoding:
     char *pch;
     pch = strtok(cmd, "-,.");
-    int r = atoi(pch);
-    Serial.print("R:"); Serial.println(r);
-    
-    pch = strtok(NULL, "-,.");
-    int g = atoi(pch);
-    Serial.print("G:"); Serial.println(g);
-  
-    pch = strtok(NULL, "-,.");
-    int b = atoi(pch);
-    Serial.print("B:"); Serial.println(b);
-  
-    pch = strtok(NULL, "-,.");
-    int led = atoi(pch);
-    Serial.print("L:"); Serial.println(led);
 
-    //Send out the LED Command
-    if(led == 0){
-      onBoard_Pix.setPixelColor(led, r, g, b);
-      onBoard_Pix.show();
-    }
-    else{
-      led = led - 1;
-      offBoard_Pixels.setPixelColor(led, r, g, b);
-      offBoard_Pixels.show();
+    while(true){
+      int r = atoi(pch);
+      Serial.print("R:"); Serial.println(r);
+      
+      pch = strtok(NULL, "-,.");
+      int g = atoi(pch);
+      Serial.print("G:"); Serial.println(g);
+    
+      pch = strtok(NULL, "-,.");
+      int b = atoi(pch);
+      Serial.print("B:"); Serial.println(b);
+    
+      pch = strtok(NULL, "-,.");
+      int led = atoi(pch);
+      Serial.print("L:"); Serial.println(led);
+  
+      //Send out the LED Command
+      if(led == 0){
+        onBoard_Pix.setPixelColor(led, r, g, b);
+        onBoard_Pix.show();
+      }
+      else{
+        led = led - 1;
+        offBoard_Pixels.setPixelColor(led, r, g, b);
+        offBoard_Pixels.show();
+      }
+      pch = strtok(NULL, "-,.");
+      
+      if(pch == NULL){
+        break;
+      }
     }
   }
 }
