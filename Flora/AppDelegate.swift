@@ -15,7 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Get the last state of the LEDs that were saved on the phone!!!!!!
+        let defaults = UserDefaults.standard
+        DLog("Got LED Values")
+        if let ledData = defaults.array(forKey: "LED_Color_Data"){
+            LEDScarf.sharedInstance.valuesForLEDs = ledData as! [[Int]]
+        }
+            //Otherwise we can use this preset
+        else{
+            LEDScarf.sharedInstance.valuesForLEDs = Array(repeating: [20,20,150], count: 21)
+        }
+        
         return true
     }
 
@@ -38,7 +48,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        //Saving LED Data
+        let defaults = UserDefaults.standard
+        defaults.set(LEDScarf.sharedInstance.valuesForLEDs, forKey: "LED_Color_Data")
     }
 
 

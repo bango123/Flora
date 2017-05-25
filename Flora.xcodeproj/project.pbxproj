@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		172A6EC71ED20A82002B5263 /* LEDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172A6EC61ED20A82002B5263 /* LEDViewController.swift */; };
-		172A6EC91ED20B47002B5263 /* FloraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172A6EC81ED20B47002B5263 /* FloraViewController.swift */; };
+		172A6EC91ED20B47002B5263 /* FloraControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172A6EC81ED20B47002B5263 /* FloraControllers.swift */; };
 		1755B1E21ED338D900D95BC0 /* LEDScarf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1755B1E11ED338D900D95BC0 /* LEDScarf.swift */; };
 		17BFFD721EC8E17B00379480 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFFD711EC8E17B00379480 /* AppDelegate.swift */; };
 		17BFFD741EC8E17B00379480 /* ScarfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFFD731EC8E17B00379480 /* ScarfViewController.swift */; };
@@ -18,6 +18,7 @@
 		17BFFD871EC8E17B00379480 /* FloraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFFD861EC8E17B00379480 /* FloraTests.swift */; };
 		17BFFD921EC9151F00379480 /* LogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFFD911EC9151F00379480 /* LogHelper.swift */; };
 		17BFFD941ECD661900379480 /* FloraBLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFFD931ECD661900379480 /* FloraBLEManager.swift */; };
+		17FFFD911ED61B51000C4EB4 /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FFFD901ED61B51000C4EB4 /* MyButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +33,7 @@
 
 /* Begin PBXFileReference section */
 		172A6EC61ED20A82002B5263 /* LEDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LEDViewController.swift; sourceTree = "<group>"; };
-		172A6EC81ED20B47002B5263 /* FloraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloraViewController.swift; sourceTree = "<group>"; };
+		172A6EC81ED20B47002B5263 /* FloraControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloraControllers.swift; sourceTree = "<group>"; };
 		1755B1E11ED338D900D95BC0 /* LEDScarf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LEDScarf.swift; sourceTree = "<group>"; };
 		17BFFD6E1EC8E17B00379480 /* Flora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17BFFD711EC8E17B00379480 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +47,7 @@
 		17BFFD881EC8E17B00379480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17BFFD911EC9151F00379480 /* LogHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogHelper.swift; sourceTree = "<group>"; };
 		17BFFD931ECD661900379480 /* FloraBLEManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloraBLEManager.swift; sourceTree = "<group>"; };
+		17FFFD901ED61B51000C4EB4 /* MyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +73,7 @@
 			children = (
 				17BFFD731EC8E17B00379480 /* ScarfViewController.swift */,
 				172A6EC61ED20A82002B5263 /* LEDViewController.swift */,
-				172A6EC81ED20B47002B5263 /* FloraViewController.swift */,
+				172A6EC81ED20B47002B5263 /* FloraControllers.swift */,
 			);
 			name = ViewControlelrs;
 			sourceTree = "<group>";
@@ -79,6 +81,7 @@
 		172A6ECB1ED20C36002B5263 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				17FFFD901ED61B51000C4EB4 /* MyButton.swift */,
 				1755B1E11ED338D900D95BC0 /* LEDScarf.swift */,
 				17BFFD911EC9151F00379480 /* LogHelper.swift */,
 				17BFFD931ECD661900379480 /* FloraBLEManager.swift */,
@@ -235,8 +238,9 @@
 				172A6EC71ED20A82002B5263 /* LEDViewController.swift in Sources */,
 				1755B1E21ED338D900D95BC0 /* LEDScarf.swift in Sources */,
 				17BFFD741EC8E17B00379480 /* ScarfViewController.swift in Sources */,
+				17FFFD911ED61B51000C4EB4 /* MyButton.swift in Sources */,
 				17BFFD921EC9151F00379480 /* LogHelper.swift in Sources */,
-				172A6EC91ED20B47002B5263 /* FloraViewController.swift in Sources */,
+				172A6EC91ED20B47002B5263 /* FloraControllers.swift in Sources */,
 				17BFFD941ECD661900379480 /* FloraBLEManager.swift in Sources */,
 				17BFFD721EC8E17B00379480 /* AppDelegate.swift in Sources */,
 			);

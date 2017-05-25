@@ -109,8 +109,10 @@ class FloraBLEManager : NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
                 managerConnected = true;
             }
         }
-        if connectedPeripheral.state == .connected && managerConnected{
-            return true
+        if let conPeripheral = connectedPeripheral{
+            if conPeripheral.state == .connected && managerConnected{
+                return true
+            }
         }
         return false
     }
@@ -182,7 +184,7 @@ class FloraBLEManager : NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
         
         let message = "-\(red),\(green),\(blue),\(LED)"
         
-        //DLog(message)
+        DLog(message)
         sendMessageToPeripheral(msg: message)
     }
 }
